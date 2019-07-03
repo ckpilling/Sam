@@ -1,6 +1,6 @@
 miles_per_meter = 100 / 2.54 / 12 / 5280
 
-if (exists("all_cities")) all_cities = readRDS("data/cities.rds")
+if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
 if (!exists("usa_cities")) usa_cities = readRDS("data/usa_cities.rds")
 
 generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
@@ -127,5 +127,7 @@ ensure_between = function(num, min_allowed, max_allowed) {
 
 seed_cities = c(
   "Los Angeles, USA",
+  "Atlanta, USA",
+  "Seattle, USA",
   "New York, USA"
 )
