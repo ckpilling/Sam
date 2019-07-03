@@ -33,7 +33,7 @@ shinyUI(fluidPage(
   hr(),
   
   fluidRow(
-    column(3,
+    column(5,
       selectInput("map_name", NA, c("World", "USA"), "World", width="0px"),
       p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
