@@ -62,4 +62,5 @@ shinyUI(fluidPage(
      selectInput("map_name", NA, c("World", "USA"), "World", width="0px")
    )
   )
+ )   
 ))
