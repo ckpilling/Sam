@@ -24,9 +24,6 @@ shinyUI(fluidPage(
     column(3,
       tags$button("SOLVE", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-   ),
-  
-  hr(),
   
   fluidRow(
     column(5,
