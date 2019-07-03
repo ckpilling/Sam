@@ -24,7 +24,7 @@ shinyUI(fluidPage(
     column(5,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-      column(1,
+      column(5,
       HTML("<button id='set_random_cities_2' class='btn btn-small action-button shiny-bound-input' style='background-color:white;color:white'>
             </button>")
     ), class="aaa"
