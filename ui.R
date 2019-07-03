@@ -58,5 +58,5 @@ shinyUI(fluidPage(
       plotOutput("annealing_schedule", height="260px"),
       plotOutput("distance_results", height="260px")
     )
-  ),
+  )
 ))
