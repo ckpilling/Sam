@@ -25,7 +25,7 @@ shinyUI(fluidPage(
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
       column(3,
-      HTML("<button id='set_random_cities_22' class='btn btn-large action-button shiny-bound-input'>
+      HTML("<button id='set_random_cities_2' class='btn btn-small action-button shiny-bound-input'>
             </button>")
     ), class="aaa"
   ),
@@ -43,7 +43,7 @@ shinyUI(fluidPage(
     ),
     
     column(2,
-      h4("Simulated Annealing Parameters"),
+      h4("Annealing Parameters"),
       inputPanel(
         numericInput("total_iterations", "Number of Iterations to Run", 25000, min=0, max=1000000),
         numericInput("plot_every_iterations", "Draw Map Every N Iterations", 1000, min=1, max=1000000)
