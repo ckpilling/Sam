@@ -16,16 +16,21 @@ shinyUI(fluidPage(
   fluidRow(
     column(5,
       tags$ol(
-        tags$li("Pick your favourite cities"),
-        tags$li("Adjust some simulated annealing parameters"),
+        tags$li("Pick your fave cities"),
+        tags$li("Adjust simulated annealing parameters"),
         tags$li("Click the 'Route Me' button!")
       )
     ),
     column(3,
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-  class="aaa"
-  )
+    column(3,
+      HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
+              <i class='fa fa-refresh'></i>
+              Set Cities Randomly
+            </button>")
+    ), class="aaa"
+  ),
   
   hr(),
   
