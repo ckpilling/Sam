@@ -15,6 +15,18 @@ shinyUI(fluidPage(
   
   fluidRow(
     column(5,
+      tags$ol(
+        tags$li("Customize the list of cities, based on the world or US map"),
+        tags$li("Adjust simulated annealing parameters to taste"),
+        tags$li("Click the 'solve' button!")
+      )
+    ),
+    column(3,
+      tags$button("SOLVE", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
+    ),
+  
+  fluidRow(
+    column(5,
       h4("Choose cities to tour"),
       selectInput("map_name", NA, c("World", "USA"), "World", width="100px"),
       p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
