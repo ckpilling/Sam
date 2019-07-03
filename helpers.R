@@ -3,7 +3,7 @@ miles_per_meter = 100 / 2.54 / 12 / 5280
 if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
 if (!exists("usa_cities")) usa_cities = readRDS("data/usa_cities.rds")
 
-generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
+generate_random_cities = function(n = 10, min_dist = 250, usa_only=FALSE) {
   if (usa_only) {
     candidates = usa_cities
   } else {
@@ -36,7 +36,7 @@ plot_base_map = function(map_name="world") {
   margins = c(3.5, 0, 3.5, 0)
   if (map_name == "world") {
     map("world", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
-  } else if (map_name == "world") {
+  } else if (map_name == "usa") {
     map("usa", col="#f3f3f3", border=FALSE, fill=TRUE, mar=margins) #, projection="albers", parameters=c(29.5, 45.5))
     map("state", add=TRUE, col="#999999", fill=FALSE) #, projection="albers", parameters=c(29.5, 45.5))
   }
@@ -48,7 +48,7 @@ plot_city_map = function(cities, map_name="world", label_cities=TRUE) {
   map.cities(cities, pch=19, cex=1.1, label=label_cities)
 }
 
-plot_tour = function(cities, tour, great_circles, map_name="usa", label_cities=TRUE) {
+plot_tour = function(cities, tour, great_circles, map_name="world", label_cities=TRUE) {
   plot_city_map(cities, map_name, label_cities=label_cities)
   
   if (length(tour) > 1) {
@@ -126,8 +126,34 @@ ensure_between = function(num, min_allowed, max_allowed) {
 }
 
 seed_cities = c(
-  "Los Angeles, USA",
-  "Atlanta, USA",
-  "Seattle, USA",
+  "Buenos Aires, Argentina",
+  "Sydney, Australia",
+  "Rio de Janeiro, Brazil",
+  "Montreal, Canada",
+  "Beijing, China",
+  "Moroni, Comoros",
+  "Cairo, Egypt",
+  "Paris, France",
+  "Athens, Greece",
+  "Budapest, Hungary",
+  "Reykjavik, Iceland",
+  "Delhi, India",
+  "Baghdad, Iraq",
+  "Rome, Italy",
+  "Tokyo, Japan",
+  "Bamako, Mali",
+  "Mexico City, Mexico",
+  "Kathmandu, Nepal",
+  "Oslo, Norway",
+  "Port Moresby, Papua New Guinea",
+  "Lima, Peru",
+  "Kigali, Rwanda",
+  "San Marino, San Marino",
+  "Singapore, Singapore",
+  "Moscow, Russia",
+  "Colombo, Sri Lanka",
+  "Bangkok, Thailand",
+  "Istanbul, Turkey",
+  "London, UK",
   "New York, USA"
 )
