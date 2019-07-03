@@ -7,33 +7,31 @@ shinyUI(fluidPage(
     tags$link(rel="stylesheet", type="text/css", href="custom_styles.css")
   ),
   
-  title = "Sam in America",
+  title = "Sam tours US",
   
-  tags$h2(tags$a(href="http://www.fujitsu.com", "Create your own tour", target="_blank")),
+  tags$h2(tags$a(href="http://www.fujitsu.com", "Create your US tour", target="_blank")),
   
   plotOutput("map", height="550px"),
   
   fluidRow(
     column(5,
       tags$ol(
-        tags$li("Pick your favourite US cities"),
-        tags$li("Adjust simulated annealing parameters as you wish"),
+        tags$li("Pick your favourite cities"),
+        tags$li("Adjust some simulated annealing parameters"),
         tags$li("Click the 'Route Me' button!")
       )
     ),
     column(3,
-      HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
-              <i class='fa fa-refresh'></i>
-              Set Cities Randomly
-            </button>")
-    ), class="aaa"
+      tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
+    ), 
+    class="aaa"
   ),
   
   hr(),
   
   fluidRow(
     column(5,
-      h4("Choose cities to tour"),
+      h4("Choose a map and which cities to tour"),
       selectInput("map_name", NA, c("World", "USA"), "World", width="100px"),
       p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
