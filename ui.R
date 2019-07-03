@@ -48,9 +48,6 @@ shinyUI(fluidPage(
     column(2,
       h4("Simulated Annealing Parameters"),
       inputPanel(
-        numericInput("s_curve_amplitude", "S-curve Amplitude", 4000, min=0, max=10000000),
-        numericInput("s_curve_center", "S-curve Center", 0, min=-1000000, max=1000000),
-        numericInput("s_curve_width", "S-curve Width", 3000, min=1, max=1000000),
         numericInput("total_iterations", "Number of Iterations to Run", 25000, min=0, max=1000000),
         numericInput("plot_every_iterations", "Draw Map Every N Iterations", 1000, min=1, max=1000000)
       ),
