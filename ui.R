@@ -44,7 +44,7 @@ shinyUI(fluidPage(
     column(2,
       h4("Annealing Parameters"),
       inputPanel(
-        numericInput("total_iterations", "Number of Iterations to Run", 100000, min=0, max=1000000, width="80%"),
+        numericInput("total_iterations", "Number of Iterations to Run", 100000, min=0, max=1000000, width="500px"),
         numericInput("plot_every_iterations", "Draw Map Every N Iterations", 750, min=1, max=1000000)
       ),
       class="numeric-inputs"
