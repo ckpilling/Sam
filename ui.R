@@ -25,7 +25,7 @@ shinyUI(fluidPage(
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
       column(3,
-      HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
+      HTML("<button id='set_random_cities_22' class='btn btn-large action-button shiny-bound-input'>
             </button>")
     ), class="aaa"
   ),
