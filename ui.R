@@ -59,19 +59,4 @@ shinyUI(fluidPage(
       plotOutput("distance_results", height="260px")
     )
   ),
-  
-  hr(),
-  
-  fluidRow(
-    column(5,
-      h4("Choose a map and which cities to tour"),
-      selectInput("map_name", NA, c("World", "USA"), "World", width="100px"),
-      p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
-      selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
-                     options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select some cities...",
-                                    selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
-      checkboxInput("label_cities", "Label cities on map?", FALSE)
-    ),
-  
-  
 ))
