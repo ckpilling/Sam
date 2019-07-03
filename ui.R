@@ -51,7 +51,7 @@ shinyUI(fluidPage(
       class="numeric-inputs"
     ),
     
-    column(5,
+    column(2,
       plotOutput("annealing_schedule", height="260px"),
       plotOutput("distance_results", height="260px")
     )
