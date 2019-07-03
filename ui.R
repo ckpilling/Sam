@@ -26,6 +26,8 @@ shinyUI(fluidPage(
     ),
    ),
   
+  hr(),
+  
   fluidRow(
     column(5,
       h4("Choose cities to tour"),
