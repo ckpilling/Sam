@@ -9,7 +9,7 @@ shinyUI(fluidPage(
   
   title = "Sam in America",
   
-  tags$h2(tags$a(href="http://www.fujitsu.com", "Create your own tour", target="_blank")),
+  tags$h2(tags$a(href="/traveling-salesman", "Create your own tour", target="_blank")),
   
   plotOutput("map", height="550px"),
   
