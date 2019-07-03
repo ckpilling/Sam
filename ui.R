@@ -24,7 +24,7 @@ shinyUI(fluidPage(
     column(3,
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-    column(5,
+    column(3,
       tags$ol(
         tags$li("Pick your fave cities"),
         tags$li("Adjust simulated annealing parameters"),
