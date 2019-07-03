@@ -18,11 +18,11 @@ shinyUI(fluidPage(
       tags$ol(
         tags$li("Pick your fave cities"),
         tags$li("Adjust simulated annealing parameters"),
-        tags$li("Click the 'Route Me' button!")
+        tags$li("Click the 'Optimise Now!' button!")
       )
     ),
     column(3,
-      tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
+      tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
       column(3,
       HTML("<button id='set_random_cities_2' class='btn btn-small action-button shiny-bound-input' style='background-color:white;color:white'>
