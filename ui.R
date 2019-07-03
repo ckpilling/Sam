@@ -27,7 +27,6 @@ shinyUI(fluidPage(
     column(3,
       HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
               <i class='fa fa-refresh'></i>
-              Set Cities Randomly
             </button>")
     ), class="aaa"
   ),
