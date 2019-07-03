@@ -9,7 +9,7 @@ shinyUI(fluidPage(
   
   title = "Sam in America",
   
-  tags$h2(tags$a(href="/traveling-salesman", "Create your own tour", target="_blank")),
+  tags$h2(tags$a(href="http://www.fujitsu.com", "Create your own tour", target="_blank")),
   
   plotOutput("map", height="550px"),
   
@@ -25,10 +25,10 @@ shinyUI(fluidPage(
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
     column(3,
-      HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
-              <i class='fa fa-refresh'></i>
-              Set Cities Randomly
-            </button>")
+#       HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
+#               <i class='fa fa-refresh'></i>
+#               Set Cities Randomly
+#             </button>")
     ), class="aaa"
   ),
   
