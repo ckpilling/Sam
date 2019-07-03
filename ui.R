@@ -23,8 +23,8 @@ shinyUI(fluidPage(
     ),
     column(3,
       tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
-     )
-    ),
+   ), class="aaa"
+  ),
   
   hr(),
   
