@@ -55,5 +55,10 @@ shinyUI(fluidPage(
       plotOutput("annealing_schedule", height="260px"),
       plotOutput("distance_results", height="260px")
     )
+    selectInput("map_name", NA, c("World", "USA"), "World", width="0px"),
+      p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
+      selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
+                     options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select some cities...",
+                                    selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
   )
 ))
