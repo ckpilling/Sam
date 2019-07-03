@@ -21,10 +21,10 @@ shinyUI(fluidPage(
         tags$li("Click the 'Optimise Now!' button!")
       )
     ),
-    column(3,
+    column(2,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-      column(3,
+      column(1,
       HTML("<button id='set_random_cities_2' class='btn btn-small action-button shiny-bound-input' style='background-color:white;color:white'>
             </button>")
     ), class="aaa"
@@ -42,7 +42,7 @@ shinyUI(fluidPage(
       checkboxInput("label_cities", "Label cities on map?", FALSE)
     ),
     
-    column(2,
+    column(5,
       h4("Annealing Parameters"),
       inputPanel(
         numericInput("total_iterations", "Number of Iterations to Run", 100000, min=0, max=1000000),
