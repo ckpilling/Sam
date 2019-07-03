@@ -21,7 +21,7 @@ shinyUI(fluidPage(
         tags$li("Click the 'Optimise Now!' button!")
       )
     ),
-    column(2,
+    column(5,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
       column(1,
@@ -42,7 +42,7 @@ shinyUI(fluidPage(
       checkboxInput("label_cities", "Label cities on map?", FALSE)
     ),
     
-    column(5,
+    column(3,
       h4("Annealing Parameters"),
       inputPanel(
         numericInput("total_iterations", "Number of Iterations to Run", 100000, min=0, max=1000000),
@@ -51,7 +51,7 @@ shinyUI(fluidPage(
       class="numeric-inputs"
     ),
     
-    column(2,
+    column(5,
       plotOutput("annealing_schedule", height="260px"),
       plotOutput("distance_results", height="260px")
     )
