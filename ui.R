@@ -53,7 +53,12 @@ shinyUI(fluidPage(
     column(5,
       plotOutput("annealing_schedule", height="260px"),
       plotOutput("distance_results", height="260px")
-    )
+    ),
+    
+    hr(),
+    
+    fluidRow(
+    column(3,  
     selectInput("map_name", NA, c("World", "USA"), "World", width="0px")
    )
 ))
