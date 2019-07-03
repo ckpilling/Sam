@@ -32,17 +32,17 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
   return(cities)
 }
 
-plot_base_map = function(map_name="USA") {
+plot_base_map = function(map_name="world") {
   margins = c(3.5, 0, 3.5, 0)
-  if (map_name == "USA") {
-    map("USA", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
-    map("state", add=TRUE, col="#999999", fill=FALSE) #, projection="albers", parameters=c(29.5, 45.5))
+  if (map_name == "world") {
+    map("world", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
   } else if (map_name == "world") {
-    map("world", col="#f3f3f3", border=FALSE, fill=TRUE, mar=margins) #, projection="albers", parameters=c(29.5, 45.5))
+    map("usa", col="#f3f3f3", border=FALSE, fill=TRUE, mar=margins) #, projection="albers", parameters=c(29.5, 45.5))
+    map("state", add=TRUE, col="#999999", fill=FALSE) #, projection="albers", parameters=c(29.5, 45.5))
   }
 }
 
-plot_city_map = function(cities, map_name="usa", label_cities=TRUE) {
+plot_city_map = function(cities, map_name="world", label_cities=TRUE) {
   plot_base_map(map_name)
   # TODO: maptools pointLabel() for better label placement
   map.cities(cities, pch=19, cex=1.1, label=label_cities)
