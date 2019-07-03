@@ -9,7 +9,7 @@ shinyUI(fluidPage(
   
   title = "Sam travels America",
   
-#   tags$h2(tags$a(href="/traveling-salesman", "Traveling Salesman", target="_blank")),
+tags$h2(tags$a(href="", "Create Sam's tour route", target="_blank")),
   
   plotOutput("map", height="550px"),
   
