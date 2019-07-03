@@ -16,20 +16,14 @@ shinyUI(fluidPage(
   fluidRow(
     column(5,
       tags$ol(
-        tags$li("Customize the list of cities, based on the world or US map"),
-        tags$li("Adjust simulated annealing parameters to taste"),
-        tags$li("Click the 'solve' button!")
+        tags$li("Pick your favourite US cities"),
+        tags$li("Adjust simulated annealing parameters as you wish"),
+        tags$li("Click the 'Route Me' button!")
       )
     ),
     column(3,
-      tags$button("SOLVE", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
-    ),
-    column(3,
-      HTML("<button id='set_random_cities_2' class='btn btn-large action-button shiny-bound-input'>
-              <i class='fa fa-refresh'></i>
-              Set Cities Randomly
-            </button>")
-    ), class="aaa"
+      tags$button("Route Me", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
+    )
   ),
   
   hr(),
