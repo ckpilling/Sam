@@ -33,7 +33,7 @@ shinyUI(fluidPage(
   hr(),
   
   fluidRow(
-    column(5,
+    column(3,
       selectInput("map_name", NA, c("World", "USA"), "World", width="0px"),
       p("Type below to select individual cities, or", actionButton("set_random_cities", "set randomly", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
@@ -42,7 +42,7 @@ shinyUI(fluidPage(
       checkboxInput("label_cities", "Label cities on map?", FALSE)
     ),
     
-    column(3,
+    column(2,
       h4("Annealing Parameters"),
       inputPanel(
         numericInput("total_iterations", "Number of Iterations to Run", 100000, min=0, max=1000000),
