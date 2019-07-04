@@ -34,7 +34,7 @@ shinyUI(fluidPage(
   
   fluidRow(
     column(5,
-      p("Type the cities for Sam's gigs, or", actionButton("set_random_cities", "pick random cities", icon=icon("refresh"))),
+      p("Type the cities for Sam's gigs, or", actionButton("set_random_cities", "auto pick cities", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
                      options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select some cities...",
                                     selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
