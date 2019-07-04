@@ -48,7 +48,7 @@ shinyServer(function(input, output, session) {
       if (map_name() == "world") {
         cty = generate_random_cities(n=20, min_dist=500)
       } else if (map_name() == "usa") {
-        cty = generate_random_cities(n=20, min_dist=50, usa_only=TRUE)
+        cty = generate_random_cities(n=48, min_dist=50, usa_only=TRUE)
       }
       
       cty$n = 1:nrow(cty)
