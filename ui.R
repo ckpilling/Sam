@@ -32,6 +32,8 @@ shinyUI(fluidPage(
   
   hr(),
   
+  hr(),
+  
   fluidRow(
     column(5,
       p("Type the cities for Sam's gigs, or", actionButton("set_random_cities", "pick random cities", icon=icon("refresh"))),
