@@ -1,5 +1,5 @@
 library(shiny)
-if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
+# if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
 if (!exists("usa_cities")) usa_cities = readRDS("data/usa_cities.rds")
 
 shinyUI(fluidPage(
@@ -7,36 +7,32 @@ shinyUI(fluidPage(
     tags$link(rel="stylesheet", type="text/css", href="custom_styles.css")
   ),
   
-  title = "Sam tours US",
+  title = "Als tours US",
   
-  tags$h2(tags$a(href="http://www.fujitsu.com", "Create a US tour for Sam and optimise it!", target="_blank")),
+  tags$h2(tags$a(href="http://www.fujitsu.com", "Create a US tour for Als and optimise it!", target="_blank")),
   
   plotOutput("map", height="550px"),
   
   fluidRow(
     column(5,
       tags$ol(
-        tags$li("Pick cities for Sam's gigs"),
-        tags$li("Adjust simulated annealing parameters"),
+        tags$li("Pick cities for Als' gigs"),
+        tags$li("Adjust parameters (optional)"),
         tags$li("Click the 'Optimise Now!' button!")
       )
     ),
     column(3,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     ),
-      column(3,
-      HTML("<button id='set_random_cities_2' class='btn btn-small action-button shiny-bound-input' style='background-color:white;color:white'>
-            </button>")
-    ), class="aaa"
   ),
   
   hr(),
   
   fluidRow(
     column(5,
-      p("Type the cities for Sam's gigs, or", actionButton("set_random_cities", "auto pick cities", icon=icon("refresh"))),
+      p("Type the cities for Als' gigs, or", actionButton("set_random_cities", "auto pick cities", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
-                     options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select some cities...",
+                     options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select cities",
                                     selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
       checkboxInput("label_cities", "Label cities on map?", FALSE)
     ),
